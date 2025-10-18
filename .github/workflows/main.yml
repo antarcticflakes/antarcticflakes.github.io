@@ -1,10 +1,9 @@
-# 在每次推送时执行此脚本：
 on: push
 name: Build and deploy GH Pages
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # 注意：分支可能需要更改，例如改为 'master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v4
